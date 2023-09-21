@@ -103,7 +103,7 @@ DATABASES = {
         'ENGINE': 'django_tenants.postgresql_backend',
         'NAME': 'GSS_tenant_DB',
         'USER': 'postgres',
-        'PASSWORD': 'Jay@040103',
+        'PASSWORD':'Jenc@2410',
         'HOST': 'localhost',
         'PORT': '',
     }

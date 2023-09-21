@@ -63,7 +63,7 @@ def notfound(request):
 def job_opening_form(request, job_id):
     try:
         job_listing = JobListing.objects.get(id=job_id)
-        title = job_listing.title
+        # title = job_listing.title
         data = {
             'title': job_listing.title,
             'description_file': job_listing.description_file
@@ -116,9 +116,9 @@ def get_job_form(request):
     return redirect('/notfound')
 
 
-def team(request):
-    return render(request, 'frontend_design/team.html')
+# def team(request):
+#     return render(request, 'frontend_design/team.html')
 
 
-def blog(request):
-    return render(request, 'frontend_design/blog.html')
+def SignUp(request):
+    return render(request, 'frontend_design/SignUp.html')

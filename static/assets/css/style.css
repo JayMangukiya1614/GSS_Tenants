@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #16D5FF;
+    --primary: #8bd8bd;
     --secondary: #999999;
     --light: #F2F8FE;
     --dark: #111111;
@@ -350,3 +350,13 @@ h6,
 .footer .copyright a:hover {
     color: var(--dark);
 }
+
+.btn-primary{
+    background-color: #8bd8bd!important;
+    border-color: #8bd8bd!important;
+    /* color: white!important; */
+}
+
+/* a{
+    color: #8bd8bd!important;
+} */

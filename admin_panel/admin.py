@@ -76,6 +76,7 @@ class ApplicantAdmin(admin.ModelAdmin):
 
     send_email_action.short_description = 'Send email to selected applicants'
 
+# admin.site.register(Domain)
     # Add other customizations for the Applicant model
 if "(name='admin')" in str(admin.site._registry):
     admin.site.register(Client)
