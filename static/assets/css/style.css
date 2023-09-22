@@ -38,6 +38,10 @@ h6,
     opacity: 1;
 }
 
+.text-primary {
+    color: #8bd8bd !important;
+}
+
 
 /*** Button ***/
 .btn {
