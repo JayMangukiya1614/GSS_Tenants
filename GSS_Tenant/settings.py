@@ -92,6 +92,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'GSS_Tenant.wsgi.application'
 
 
@@ -103,7 +105,7 @@ DATABASES = {
         'ENGINE': 'django_tenants.postgresql_backend',
         'NAME': 'GSS_tenant_DB',
         'USER': 'postgres',
-        'PASSWORD':'Jenc@2410',
+        'PASSWORD':'Jay@040103',
         'HOST': 'localhost',
         'PORT': '',
     }
