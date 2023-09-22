@@ -10,6 +10,7 @@ from django.utils import timezone
 from django.http import HttpResponseNotFound
 from django.core.exceptions import ObjectDoesNotExist
 import os
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -50,9 +51,11 @@ def career(request):
             'joblisting': JobListing.objects.all()
         }
         return render(request, 'frontend_design/career.html', data)
-    except ObjectDoesNotExist:
-        return redirect('/notfound')
-
+    except Exception as e:
+        data = {
+            'joblisting': None
+        }
+        return render(request, 'frontend_design/career.html', data)
 
 def notfound(request):
     return render(request, 'frontend_design/404notfound.html')
@@ -122,3 +125,25 @@ def get_job_form(request):
 
 def SignUp(request):
     return render(request, 'frontend_design/SignUp.html')
+
+
+@csrf_protect
+def signup_save(request):
+
+    username = request.POST.get('username')
+    email = request.POST.get('email')
+    password1 = request.POST.get('password1')
+    # return HttpResponse(password1)
+    # Use keyword arguments to create the user
+    user_ = User.objects.create(username=username, email=email, password=password1, is_staff=True)
+    
+    # Note: You should hash the password before saving it to the database.
+    # You can use the set_password method to do that.
+    user_.set_password(password1)
+    
+    user_.save()
+    
+    return HttpResponse('Work')
+
+    
+    
