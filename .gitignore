@@ -1,3 +1,5 @@
 *.pyc
 *.py[co]
 GSS_Tenant/settings.py
+*.sqlite3
+db.sqlite3
